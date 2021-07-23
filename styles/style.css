@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'raleway-thin';
+    src: url('polices/Raleway/static/Raleway-Regular.ttf') format('truetype');
+}
+
+body{
+    font-family: raleway-thin, 'Arial Black', Impact, serif;
+}
+
+#bloc_page{
+    width: 86%;
+    margin: auto;
+}
+
+h1, h2{
+    font-size: x-large;
+}
+
+.small{
+    font-size: medium;
+}
+
+/* --- HEADER -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+header{
+/*     background-color: red; */    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav ul{
+/*     background-color: yellow; */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav li{
+    margin: 2em;
+}
+
+nav a{
+    padding: 2em;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a, nav a:hover, nav a:visited{
+    color: #0065FC;
+}
+
+
+
+
+#logoReservia{
+    width: 110px;
+    height: auto;
+}
+
+#logoReservia img{
+/*     background-color: yellow; */
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* --- SECTION RECHERCHE -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.search{
+    margin-top: 10px;
+    height: 40px;
+    width: 300px;
+    display: inline-flex;
+}
+
+.search_icon{
+    background-color: #F2F2F2;
+    padding: 3%;
+    width: 20px;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+}
+
+.search_text{
+    border-top: #F2F2F2  1px solid;
+    border-right: none;
+    border-bottom: #F2F2F2  1px solid;
+    border-left: none;
+    padding: 0 3%;
+    width: 180px;
+/*     box-sizing: border-box; */
+/*     color: black; */
+}
+
+.search_text:focus {
+    outline: none !important;
+    border:1px solid #0065FC;
+/*     box-shadow: 0 0 10px #719ECE; */
+}
+
+.search_format_text{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.search_button{
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1.5rem;
+    background-color: #0065FC;
+    cursor: pointer;
+    color: white;
+}
+
+/* --- SECTION FILTRES -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.filtres{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: flex-start;
+/*     width: 800px; */
+    height: 40px;
+    padding: 0.2rem;
+}
+
+.rond{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #deebff;
+    border-radius: 50%;
+}
+
+.star_true, .fa-info, .rond .fas{
+    color: #0065FC;
+}
+
+.star_false{
+    color: #d9d9d9;
+}
+
+.filtre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.7rem;
+/*     height: 3rem; */
+/*     width: auto; */
+    border-radius: 2.5rem;
+    border: 2px solid #d9d9d9;
+    cursor: pointer;
+}
+
+.filtre:hover{
+    background-color: #deebff;
+}
+
+
+.filtre span{
+    margin: 0 1rem; 
+    font-weight: bold; 
+}
+
+.info{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo_info{
+    text-align: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+}
+
+/* --- SECTION HEBERGEMENT + ASIDE TOP-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.section_hebergement{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+
+    
+/*     width: 70%; */
+    
+}
+
+/* --- SECTION HEBERGEMENT -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.articles_hebergement{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Force les articles à aller à la ligne */
+/*     justify-content: flex-start; */
+    background-color: #F2F2F2;
+    border-radius: 1rem;
+    flex: 2;
+    padding: 1.5rem;
+    margin-right: 3rem;
+}
+
+.section_hebergement h2{
+    flex-basis: 95%;
+}
+
+
+
+.article_hebergement{
+    background: white;
+    box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
+    margin-bottom: 3rem;
+/*     margin: 0rem 1rem 1rem 1rem; */
+    border-radius: 1.25rem;
+    padding: 5px;
+/*     width: 280.8px;
+    height: 260px; */
+    cursor: pointer;
+
+}
+
+.article_hebergement:hover{
+    background-color: #deebff;
+
+}
+
+
+
+.lien_hebergement{
+    text-decoration: none;
+    color: black;
+    padding: 0px;
+    margin: 0px,
+
+}
+
+.figure_hebergement{
+    margin: 0;
+    padding: 0;
+}
+.img_hebergement{
+    width: 280px;
+    height: 180px;
+    border-radius: 1rem;
+
+}
+
+figcaption{
+    font-weight: bold;
+}
+/* --- SECTION TOP HEBERGEMENT -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+aside{
+    background-color: #F2F2F2;
+    border-radius: 1rem;
+    flex: 1;
+    padding: 1.5rem;
+}
+
+
+.article_populaire{
+    background: white;
+    box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
+    margin-bottom: 3rem;
+/*     margin: 0rem 1rem 1rem 1rem; */
+    border-radius: 1.25rem;
+    padding: 5px;
+ /*    width: 350px; */
+    height 180px;
+
+    cursor: pointer;
+
+
+}
+
+.img_hebergement_pop{
+    width: 280px;
+    height: 180px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.img_hebergement_pop{
+    width: 280px;
+
+    border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/* --- SECTION ACTIVITES -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.section_activite{
+    margin-top: 3rem;
+    background-color: #F2F2F2;
+    border-radius: 1rem;
+    width: 100%;
+    height: 150px;
+    padding: 1.5rem;
+}
+
+
+/* --- FOOTER -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+footer{
+    margin-top: 3rem;
+    background-color: #F2F2F2;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
