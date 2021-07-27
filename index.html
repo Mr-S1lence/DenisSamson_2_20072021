@@ -14,19 +14,12 @@
                 <img src="styles/img/Reservia@3x.png" alt="logoReservia"/>
             </div>
             <nav>
-                <ul>
-                    <li>
-                        <a href="#">Hébergements</a>
-                    </li>
-                    <li>
-                        <a href="#">Activités</a>
-                    </li>
-                    <li>
-                        <a href="#">S'inscrire</a>
-                    </li>
-                </ul>
+                <a href="#hebergement">Hébergements</a>
+                <a href="#activites" class="lien2">Activités</a>
             </nav>  
-            
+                <div class="inscription">
+                    <a  href="#">S'inscrire</a>
+                </div>
         </header>
 <!-- = SECTION RECHERCHE =================================================================== -->       
         <section>
@@ -72,7 +65,7 @@
 <!-- = SECTION ARTICLE + ASIDE =================================================================== -->
         <section class="section_hebergement">
 <!-- = SECTION ARTICLE =================================================================== -->           
-            <div class="articles_hebergement">
+            <div class="articles_hebergement" id="hebergement">
                     <h2>Hébergements à Marseille</h2>
                 <article class="article_hebergement">
                     <a href="#" class="lien_hebergement">
@@ -172,6 +165,7 @@
                         </div>
                     </a>
                 </article>    
+                <a href="#" class="afficher_plus">Afficher plus</a>
             </div>
                       
             
@@ -179,7 +173,7 @@
             
             <aside>
                 <h2>Les plus populaires</h2>
-<!--                 <article class="article_populaire">
+                <article class="article_populaire">
                     <a href="#" class="lien_hebergement_pop">
                         <div class="hebergement_pop">
                             <img class="img_hebergement_pop" src="styles/img/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Auberge Chez Anima"/>
@@ -197,7 +191,7 @@
                         </div>
                     </a>
                 </article> 
-                <article class="article_populaire">
+          <!--       <article class="article_populaire">
                     <a href="#" class="lien_hebergement_pop">
                         <div class="hebergement_pop">
                             <img class="img_hebergement_pop" src="styles/img/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Auberge Chez Anima"/>
@@ -244,9 +238,11 @@
        
        
        
-       
+        
         <section class="section_activite">
+            <scroll-page id="activites">
             <h2>Activités à Marseille</h2>
+        </scroll-page>
         </section>
 
         

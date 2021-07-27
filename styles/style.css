@@ -5,12 +5,21 @@
 
 body{
     font-family: raleway-thin, 'Arial Black', Impact, serif;
+    margin: 0;
 }
 
 #bloc_page{
-    width: 86%;
+    width: 90%;
     margin: auto;
 }
+
+scroll-container {
+    display: block;
+    width: 350px;
+    height: 200px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
 
 h1, h2{
     font-size: x-large;
@@ -25,39 +34,64 @@ h1, h2{
 
 header{
 /*     background-color: red; */    
-    display: flex;
+/*     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar button";
+    display: grid;
+    align-items: center; /* Centrer verticalement  */
+    box-sizing:content-box;
+    margin: auto;
 
 }
 
-nav ul{
+nav{
+    grid-area: navbar;
 /*     background-color: yellow; */
-    list-style-type: none;
+/*     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; */
 
+}
+.inscription{
+    grid-area: button;
+    font-weight: bold;
 }
 
 nav li{
-    margin: 2em;
+    /* margin: 2em; */
+
 }
 
-nav a{
-    padding: 2em;
-    font-weight: 500;
+header a{
+    display: inline-block;
+    padding: 2rem;
+/*     font-weight: 500; */
     text-align: center;
     text-decoration: none;
+    border-top: 3px solid transparent;
+    
 }
 
-nav a, nav a:hover, nav a:visited{
+header a:hover{
+    border-top: 3px solid #0065FC;
+}
+
+
+.lien2, .lien2:visited{
+/*     color:inherit; */
+    color: gray;
+}
+
+header a, header a:hover, header a:visited, .lien2:hover{
     color: #0065FC;
 }
 
 
 
-
 #logoReservia{
+    grid-area: logo;
     width: 110px;
     height: auto;
 }
@@ -267,9 +301,18 @@ figcaption{
 /* --- SECTION TOP HEBERGEMENT -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 aside{
+    display: grid;
+    grid-template-rows: auto repeat(3, 1fr);
+    row-gap: 2rem;
+    align-items: start;
     background-color: #F2F2F2;
     border-radius: 1rem;
     padding: 1.5rem;
+}
+
+aside h2{
+    display: flex;
+    justify-content: space-around;
 }
 /*
 .lien_hebergement_pop{
