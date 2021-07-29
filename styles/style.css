@@ -281,7 +281,9 @@ h2{
 figcaption{
     font-weight: bold;
 }
-/* --- SECTION TOP HEBERGEMENT -----------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ SECTION TOP HEBERGEMENT --------------------------------------------------
+ ------------------------------------------------------------------------*/
 
 aside{
     display: grid;
@@ -496,14 +498,37 @@ aside h2{
 } */
 
 
-/* --- FOOTER -----------------------------------------------------------------------------------------------------------------------------------------*/
-
+/* ------------------------------------------------------------------------
+ ----------FOOTER----------------------------------------------------------
+ ------------------------------------------------------------------------*/
 
 footer{
+/*     padding: 0 2rem; */
+    box-sizing: border-box;
     margin-top: 3rem;
     background-color: #F2F2F2;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: space-around;
 }
 
+.section_footer{
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content:start;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 18rem 3rem 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 1rem;
+    font-size: medium;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
