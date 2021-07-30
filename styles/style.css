@@ -81,7 +81,7 @@ h2{
 }
 
 /*--------SMARTPHONE----------------------------------------------------*/
-@media screen and (max-device-width: 480px){
+@media screen and (max-device-width: 420px){
 
     #bloc_page{
         padding: 0;
@@ -262,7 +262,7 @@ h2{
 
 /*--------SMARTPHONE----------------------------------------------------*/
 
- @media screen and (max-device-width: 480px){
+ @media screen and (max-device-width: 420px){
     .filtres h4{
         width: 100%;
     }
@@ -432,8 +432,44 @@ aside h2{
 
 }
 
+/*--------SMARTPHONE LANDSCAPE MODE---------------------------------------------------*/
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+
+    .section_hebergement{
+        grid-template-columns: 1fr;    
+    }
+    .articles_hebergement{
+        grid-template-columns: repeat(2,1fr); 
+        grid-row: 2;   
+        padding: 1rem;
+        background-color: white;
+        flex-direction: row-reverse;
+    }
+
+    .articles_hebergement h2{
+        grid-column: span 2;
+        padding: 1rem;
+    }
+
+    .article_hebergement{
+/*         width: 50%; */
+    }
+
+    aside{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        grid-row: 1;
+        border-radius: 0;
+    }
+    .legend_pop{
+    margin: 0.3rem 0.3rem 0.3rem 0.5rem;
+    }
+
+}
+
 /* ------------------------------------------------------------------------
- ----------SECTION ACTIVITES----------------------------------------------
+ ----------SECTION ACTIVITES-----------------------------------------------
  ------------------------------------------------------------------------*/
 
 .section_activites{
@@ -446,7 +482,7 @@ aside h2{
     margin-top: 4rem;
 }
 
-.section_activite h2{
+.section_activites h2{
     grid-column: span 4;
     margin: 0;
 }
@@ -482,32 +518,32 @@ aside h2{
     border-radius: 1rem 1rem 0 0;
 }
 
-.art1{
+.art_1{
     grid-row: 2/7;
     grid-column: 1/2;
 }
 
-.art2{
+.art_2{
     grid-row: 2/5;
     grid-column: 2/3;
 }
 
-.art3{
+.art_3{
     grid-row: 2/7;
     grid-column: 3/4;
 }
 
-.art4{
+.art_4{
     grid-row: 2/3;
     grid-column: 4/5;
 }
 
-.art5{ 
+.art_5{ 
     grid-row: 6/7;
     grid-column: 2/3;   
 }
 
-.art6{
+.art_6{
     grid-row: 4/7;
     grid-column: 4/5;
 }
@@ -522,6 +558,38 @@ aside h2{
 
     .lien_activite{
         margin-top: 2rem;
+    }
+
+    .img_activite{
+    position: static;
+    object-fit: cover;
+    width: 100%;
+    height: 10rem;
+    max-height: 100%;
+    border-radius: 1rem 1rem 0 0;
+    }
+}
+
+/*--------SMARTPHONE LANDSCAPE MODE--------------------------------------*/
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+    .section_activites{
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:  auto repeat(3,1fr);
+        margin: 1.5rem;
+    }
+
+    .section_activites h2{
+        grid-column: span 2;
+}
+
+    .lien_activite{
+        grid-row:inherit;
+        grid-column:inherit;
+        margin-top: 2rem;
+/*         width: 40%; */
     }
 
     .img_activite{
@@ -575,6 +643,15 @@ footer a:hover{
 
 @media screen and (max-device-width: 480px){
 
+    footer div{
+        margin: 2rem 0 0 0;
+        width: 100%;
+    }
+}
+
+/*--------SMARTPHONE LANDSCAPE MODE--------------------------------------*/
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
     footer div{
         margin: 2rem 0 0 0;
         width: 100%;
