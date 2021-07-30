@@ -81,7 +81,7 @@ h2{
 }
 
 /*--------SMARTPHONE----------------------------------------------------*/
-@media screen and (max-device-width: 480){
+@media screen and (max-device-width: 480px){
 
     #bloc_page{
         padding: 0;
