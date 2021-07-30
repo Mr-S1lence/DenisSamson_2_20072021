@@ -3,15 +3,37 @@
     src: url('polices/Raleway/static/Raleway-Regular.ttf') format('truetype');
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------
+ ----------DESKTOP----------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+
+
 body{
     font-family: raleway-thin, 'Arial Black', Impact, serif;
     margin: 0;
+/*     background-color: yellow; */
 }
 
 #bloc_page{
     max-width: 1440px;
     margin: auto;
-/*     padding: 0 2rem; */
+    padding: 0 2rem;
     box-sizing: border-box;
 }
 
@@ -24,14 +46,12 @@ h1, h2{
     font-size: medium;
 }
 
+
+
 /* --- HEADER -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 header{
-/*     background-color: red; */    
-/*     display: flex;
-    justify-content: space-between;
-    align-items: center; */
     grid-template-columns: auto 1fr auto auto;
     grid-template-areas: "logo . navbar button";
     display: grid;
@@ -43,12 +63,8 @@ header{
 
 nav{
     grid-area: navbar;
-/*     background-color: yellow; */
-/*     list-style-type: none;
-    display: flex;
-    justify-content: space-around; */
-
 }
+
 .inscription{
     grid-area: button;
     font-weight: bold;
@@ -57,11 +73,9 @@ nav{
 header a{
     display: inline-block;
     padding: 2rem;
-/*     font-weight: 500; */
     text-align: center;
     text-decoration: none;
-    border-top: 3px solid transparent;
-    
+    border-top: 3px solid transparent;    
 }
 
 header a:hover{
@@ -79,12 +93,11 @@ header a, header a:hover, header a:visited, .lien2:hover{
 
 #logoReservia{
     grid-area: logo;
-    width: 110px;
+    width: 7rem;
     height: auto;
 }
 
 #logoReservia img{
-/*     background-color: yellow; */
     width: 100%;
     height: auto;
 }
@@ -93,11 +106,46 @@ h2{
     margin: 0;
 }
 
+/* ------------------------------------------------------------------------
+ ----------SMARTPHONE------------------------------------------------------
+ ------------------------------------------------------------------------*/
+@media screen and (max-device-width: 480px){
+
+    #bloc_page{
+        padding: 0;
+        font-size: 5vw;
+    }
+
+    header{
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo . button" "navbar navbar navbar";  
+    }
+
+    #logoReservia{
+        margin-left: 1rem;
+    }
+
+    .lien1{
+        border-bottom: 3px solid #0065FC;
+    }
+    
+    nav{
+        display: flex;
+    }
+
+    nav a{
+        width: 50%;
+    }
+} 
+    
+
+
+
 /* --- SECTION RECHERCHE -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 .search{
-    margin-top: 10px;
-    height: 40px;
+    margin-top: 1rem;
+    height: 2.5rem;
     width: auto;
     display: inline-flex;
 }
@@ -141,16 +189,57 @@ h2{
     color: white;
 }
 
+.search_button2{
+    position:absolute;
+    visibility: hidden;
+}
+
+/* ------------------------------------------------------------------------
+ ----------SMARTPHONE------------------------------------------------------
+ ------------------------------------------------------------------------*/
+@media screen and (max-device-width: 480px){
+    .section_recherche{
+        padding: 1rem;
+    }
+
+    .search{
+        width: 100%;
+/*         display: flex; */
+        justify-content: center;
+    }
+
+    .search_button{
+        position:absolute;
+        visibility: hidden;
+    }
+
+    .search_button2{
+        position:static;
+        visibility: visible;
+        border: none;
+        border-radius: 0 1rem 1rem 0;
+        padding: 0 1.5rem;
+        background-color: #0065FC;
+        cursor: pointer;
+        color: white;  
+        text-align: center;  
+        padding: 0.5rem;
+        width: 2rem;
+    } 
+}
+
+
 /* --- SECTION FILTRES -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 .filtres{
     display: flex;
     align-items: center;
-    margin-top: 20px;
     justify-content: flex-start;
+    margin-top: 1.5rem;
 /*     width: 800px; */
-    height: 40px;
+    height: auto;
     padding: 0.2rem;
+    flex-wrap: wrap;
 }
 
 .rond{
@@ -208,6 +297,15 @@ h2{
     margin-right: 0.6rem;
 }
 
+/* ------------------------------------------------------------------------
+ ----------SMARTPHONE------------------------------------------------------
+ ------------------------------------------------------------------------*/
+ @media screen and (max-device-width: 480px){
+    .filtres h4{
+        width: 100%;
+    }
+}
+
 /* --- SECTION HEBERGEMENT + ASIDE TOP-----------------------------------------------------------------------------------------------------------------------------------------*/
 
 .section_hebergement{
@@ -217,6 +315,8 @@ h2{
     margin-top: 1rem;   
 /*     width: 70%; */   
 }
+
+
 
 /* --- SECTION HEBERGEMENT -----------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -281,6 +381,9 @@ h2{
 figcaption{
     font-weight: bold;
 }
+
+
+
 /* ------------------------------------------------------------------------
  SECTION TOP HEBERGEMENT --------------------------------------------------
  ------------------------------------------------------------------------*/
@@ -294,6 +397,20 @@ aside{
     border-radius: 1rem;
     padding: 2rem;
 }
+
+@media screen and (max-device-width: 480px){
+    .section_hebergement{
+        grid-template-columns: 1fr;        
+    }
+    .articles_hebergement{
+        grid-template-columns: 1fr;    
+    }
+
+    aside{
+        grid-template-columns: 1fr;
+    }
+}
+
 
 aside h2{
     display: flex;
@@ -323,6 +440,7 @@ aside h2{
 }
 
 .hebergement_pop{
+    min-width: 40%;
     width: 40%;
     height: 100%;
 /*     overflow: hidden; */
@@ -373,17 +491,6 @@ aside h2{
     margin-top: 4rem;
 }
 
-.article_activite{
-
-/*     background: white;
-
-    box-sizing:border-box; 
-    border-radius: 1.25rem;
-    padding: 0.3rem;
-    cursor: pointer; */
-/*     min-height: 100px; */
-/* overflow: hidden; */
-}
 
 .section_activite h2{
     grid-column: span 4;
@@ -511,6 +618,7 @@ footer{
 
 .section_footer{
     max-width: 1440px;
+    padding: 0 2rem;
     margin: auto;
     display: flex;
     justify-content:start;
