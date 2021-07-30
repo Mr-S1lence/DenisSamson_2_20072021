@@ -341,12 +341,9 @@ h2{
 .article_hebergement{
     background: white;
     box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
-/*     box-sizing:border-box;  */
- /*    height: 100%;  */
     border-radius: 1.25rem;
     padding: 0.3rem;
     cursor: pointer;
-/*     transition-duration: 0.1s; */
 }
 
 .article_hebergement:hover{
@@ -358,7 +355,6 @@ h2{
     color: black;
     padding: 0;
     margin: 0;
-
 }
 
 .figure_hebergement{
@@ -398,18 +394,7 @@ aside{
     padding: 2rem;
 }
 
-@media screen and (max-device-width: 480px){
-    .section_hebergement{
-        grid-template-columns: 1fr;        
-    }
-    .articles_hebergement{
-        grid-template-columns: 1fr;    
-    }
 
-    aside{
-        grid-template-columns: 1fr;
-    }
-}
 
 
 aside h2{
@@ -430,13 +415,11 @@ aside h2{
 
 .lien_hebergement_pop{
     display: flex;
-/*     align-items: stretch; */
     text-decoration: none;
     color: black;
     padding: 0px;
     margin: 0px;
     height: 100%;
-/*     overflow: auto; */
 }
 
 .hebergement_pop{
@@ -475,6 +458,30 @@ aside h2{
 
 .legend_pop h3{
     margin: 0;
+}
+
+@media screen and (max-device-width: 480px){
+    .section_hebergement{
+        grid-template-columns: 1fr;        
+    }
+    .articles_hebergement{
+        grid-template-columns: 1fr;    
+        padding: 1rem;
+    }
+
+    .articles_hebergement h2{
+        grid-column: span 1;
+        padding: 1rem;
+    }
+
+    aside{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .legend_pop{
+    margin: 0.3rem 0.3rem 0.3rem 0.5rem;
+    }
+
 }
 
 
