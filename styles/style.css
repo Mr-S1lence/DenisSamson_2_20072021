@@ -3,31 +3,9 @@
     src: url('polices/Raleway/static/Raleway-Regular.ttf') format('truetype');
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------------------------------------------------------------------------
- ----------DESKTOP----------------------------------------------------------
- ------------------------------------------------------------------------*/
-
-
-
 body{
     font-family: raleway-thin, 'Arial Black', Impact, serif;
     margin: 0;
-/*     background-color: yellow; */
 }
 
 #bloc_page{
@@ -37,7 +15,6 @@ body{
     box-sizing: border-box;
 }
 
-
 h1, h2{
     font-size: x-large;
 }
@@ -46,10 +23,9 @@ h1, h2{
     font-size: medium;
 }
 
-
-
-/* --- HEADER -----------------------------------------------------------------------------------------------------------------------------------------*/
-
+/* ------------------------------------------------------------------------
+ ----------HEADER----------------------------------------------------------
+ ------------------------------------------------------------------------*/
 
 header{
     grid-template-columns: auto 1fr auto auto;
@@ -58,7 +34,6 @@ header{
     align-items: center; /* Centrer verticalement  */
     box-sizing:content-box;
     margin: auto;
-
 }
 
 nav{
@@ -83,7 +58,6 @@ header a:hover{
 }
 
 .lien2, .lien2:visited{
-/*     color:inherit; */
     color: gray;
 }
 
@@ -106,10 +80,8 @@ h2{
     margin: 0;
 }
 
-/* ------------------------------------------------------------------------
- ----------SMARTPHONE------------------------------------------------------
- ------------------------------------------------------------------------*/
-@media screen and (max-device-width: 480px){
+/*--------SMARTPHONE----------------------------------------------------*/
+@media screen and (max-device-width: 480){
 
     #bloc_page{
         padding: 0;
@@ -138,10 +110,9 @@ h2{
     }
 } 
     
-
-
-
-/* --- SECTION RECHERCHE -----------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ ----------SECTION RECHERCHE-----------------------------------------------
+ ------------------------------------------------------------------------*/
 
 .search{
     margin-top: 1rem;
@@ -165,14 +136,11 @@ h2{
     border-left: none;
     padding: 0 3%;
     width: 180px;
-/*     box-sizing: border-box; */
-/*     color: black; */
 }
 
 .search_text:focus {
     outline: none !important;
     border:1px solid #0065FC;
-/*     box-shadow: 0 0 10px #719ECE; */
 }
 
 .search_format_text{
@@ -194,17 +162,15 @@ h2{
     visibility: hidden;
 }
 
-/* ------------------------------------------------------------------------
- ----------SMARTPHONE------------------------------------------------------
- ------------------------------------------------------------------------*/
+/*--------SMARTPHONE----------------------------------------------------*/
 @media screen and (max-device-width: 480px){
+
     .section_recherche{
         padding: 1rem;
     }
 
     .search{
         width: 100%;
-/*         display: flex; */
         justify-content: center;
     }
 
@@ -228,15 +194,15 @@ h2{
     } 
 }
 
-
-/* --- SECTION FILTRES -----------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ ----------SECTION FILTRES-------------------------------------------------
+ ------------------------------------------------------------------------*/
 
 .filtres{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-top: 1.5rem;
-/*     width: 800px; */
     height: auto;
     padding: 0.2rem;
     flex-wrap: wrap;
@@ -265,8 +231,6 @@ h2{
     justify-content: space-between;
     align-items: center;
     margin: 0.7rem;
-/*     height: 3rem; */
-/*     width: auto; */
     border-radius: 2.5rem;
     border: 2px solid #d9d9d9;
     cursor: pointer;
@@ -275,7 +239,6 @@ h2{
 .filtre:hover{
     background-color: #deebff;
 }
-
 
 .filtre span{
     margin: 0 1rem; 
@@ -297,28 +260,28 @@ h2{
     margin-right: 0.6rem;
 }
 
-/* ------------------------------------------------------------------------
- ----------SMARTPHONE------------------------------------------------------
- ------------------------------------------------------------------------*/
+/*--------SMARTPHONE----------------------------------------------------*/
+
  @media screen and (max-device-width: 480px){
     .filtres h4{
         width: 100%;
     }
 }
 
-/* --- SECTION HEBERGEMENT + ASIDE TOP-----------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ ----------SECTION HEBERGEMENT + ASIDE TOP---------------------------------
+ ------------------------------------------------------------------------*/
 
 .section_hebergement{
     display: grid;
     grid-template-columns: 6fr 3fr; /* taille et nombre de colonnes */
     column-gap: 2rem; /* définit l'espace entre les colonnes */
-    margin-top: 1rem;   
-/*     width: 70%; */   
+    margin-top: 1rem; 
 }
 
-
-
-/* --- SECTION HEBERGEMENT -----------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ ----------SECTION HEBERGEMENT---------------------------------------------
+ ------------------------------------------------------------------------*/
 
 .articles_hebergement{
     display: grid;
@@ -330,13 +293,10 @@ h2{
     padding: 2rem;
 }
 
-
 .articles_hebergement h2{
     grid-column: span 3;
     margin: 0;
 }
-
-
 
 .article_hebergement{
     background: white;
@@ -369,7 +329,6 @@ h2{
     border-radius: 1rem 1rem 0 0;
 }
 
-
 .legend{
     margin: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
@@ -378,10 +337,8 @@ figcaption{
     font-weight: bold;
 }
 
-
-
 /* ------------------------------------------------------------------------
- SECTION TOP HEBERGEMENT --------------------------------------------------
+ ----------ASIDE TOP-------------------------------------------------------
  ------------------------------------------------------------------------*/
 
 aside{
@@ -393,9 +350,6 @@ aside{
     border-radius: 1rem;
     padding: 2rem;
 }
-
-
-
 
 aside h2{
     display: flex;
@@ -411,7 +365,6 @@ aside h2{
     box-sizing: border-box;
     height: 11rem;
 }
-
 
 .lien_hebergement_pop{
     display: flex;
@@ -434,7 +387,6 @@ aside h2{
     min-width: 100%;
     min-height: 100%;
     border-radius: 1rem 0 0 1rem;
-/*     position: absolute; */
     object-fit: cover; 
 } 
 
@@ -448,6 +400,8 @@ aside h2{
 .legend_pop h3{
     margin: 0;
 }
+
+/*--------SMARTPHONE----------------------------------------------------*/
 
 @media screen and (max-device-width: 480px){
     .section_hebergement{
@@ -478,11 +432,11 @@ aside h2{
 
 }
 
+/* ------------------------------------------------------------------------
+ ----------SECTION ACTIVITES----------------------------------------------
+ ------------------------------------------------------------------------*/
 
-/* --- SECTION ACTIVITES -----------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-.section_activite{
+.section_activites{
     display: grid;
 /*     grid-template-columns:  repeat(4, 1fr); */
 /*     grid-template-rows: repeat(4, 1fr); */
@@ -492,14 +446,10 @@ aside h2{
     margin-top: 4rem;
 }
 
-
 .section_activite h2{
     grid-column: span 4;
-/*     background-color: yellow; */
     margin: 0;
 }
-
-
 
 .lien_activite{
     display: flex;
@@ -511,10 +461,6 @@ aside h2{
     margin: 0px;
     border-radius: 1.25rem;
     box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
-/*     width: 100%;
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%; */
 }
 
 .lien_activite h3{
@@ -526,7 +472,6 @@ aside h2{
     flex: 1;
     margin: 0;
     padding: 0;
-
 }
 
 .img_activite{
@@ -567,8 +512,10 @@ aside h2{
     grid-column: 4/5;
 }
 
+/*--------SMARTPHONE----------------------------------------------------*/
+
 @media screen and (max-device-width: 480px){
-    .section_activite{
+    .section_activites{
         display: block;
         padding: 1rem;
     }
@@ -592,7 +539,6 @@ aside h2{
  ------------------------------------------------------------------------*/
 
 footer{
-/*     padding: 0 2rem; */
     box-sizing: border-box;
     margin-top: 3rem;
     background-color: #F2F2F2;
@@ -600,8 +546,9 @@ footer{
 
 .section_footer{
     max-width: 1440px;
-    padding: 0 2rem;
     margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
     display: flex;
     justify-content:start;
     flex-wrap: wrap;
@@ -623,6 +570,8 @@ footer a{
 footer a:hover{
     text-decoration: underline;
 }
+
+/*--------SMARTPHONE----------------------------------------------------*/
 
 @media screen and (max-device-width: 480px){
 
