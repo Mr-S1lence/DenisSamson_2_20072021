@@ -1,4 +1,4 @@
-@font-face {
+@font-face{
     font-family: 'raleway-thin';
     src: url('polices/Raleway/static/Raleway-Regular.ttf') format('truetype');
 }
@@ -81,7 +81,8 @@ h2{
 }
 
 /*--------SMARTPHONE----------------------------------------------------*/
-@media screen and (max-device-width: 420px){
+/* @media screen and (max-device-width: 420px){ */
+@media only screen and (max-width: 420px) {
 
     #bloc_page{
         padding: 0;
@@ -138,7 +139,7 @@ h2{
     width: 180px;
 }
 
-.search_text:focus {
+.search_text:focus{
     outline: none !important;
     border:1px solid #0065FC;
 }
@@ -430,7 +431,7 @@ aside h2{
 
 /*--------SMARTPHONE LANDSCAPE MODE---------------------------------------------------*/
 
-@media only screen and (min-width: 421px) and (max-width: 767px) {
+@media only screen and (min-width: 421px) and (max-width: 767px){
 
     .section_hebergement{
         grid-template-columns: 1fr;    
@@ -463,6 +464,40 @@ aside h2{
     }
 
 }
+
+
+/*--------Tablets in portrait mode---------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+    .section_hebergement{
+        grid-template-columns: 2fr; 
+    }
+
+    .articles_hebergement{
+        grid-row: 2;   
+    }
+
+    aside{
+        grid-row: 1;
+        margin-bottom: 2rem;
+    }
+    
+}
+
+/*--------Tablets in landscape mode, older desktop monitors---------------------------------------------------*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1365px){
+        
+    .section_hebergement{
+        grid-template-columns: 2fr; 
+    }
+    
+    aside{
+            grid-row: 1;
+    }
+}
+
 
 /* ------------------------------------------------------------------------
  ----------SECTION ACTIVITES-----------------------------------------------
@@ -566,9 +601,9 @@ aside h2{
     }
 }
 
-/*--------SMARTPHONE LANDSCAPE MODE--------------------------------------*/
+/*--------SMARTPHONE LANDSCAPE MODE, Tablets in portrait mode--------------------------------------*/
 
-@media only screen and (min-width: 421px) and (max-width: 767px) {
+@media only screen and (min-width: 421px) and (max-width: 1023px){
     .section_activites{
         display: grid;
         padding: 1rem;
@@ -647,9 +682,17 @@ footer a:hover{
 
 /*--------SMARTPHONE LANDSCAPE MODE--------------------------------------*/
 
-@media only screen and (min-width: 421px) and (max-width: 767px) {
+@media only screen and (min-width: 421px) and (max-width: 767px){
     footer div{
         margin: 2rem 0 0 0;
         width: 100%;
+    }
+}
+
+/*--------Tablets in landscape mode, older desktop monitors---------------------------------------------------*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1365px){
+    footer div{
+        margin: 3rem 5rem 3rem 0;
     }
 }
