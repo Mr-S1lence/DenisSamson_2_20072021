@@ -1,10 +1,18 @@
 @font-face{
-    font-family: 'raleway-thin';
+    font-family: 'raleway-regular';
     src: url('polices/Raleway/static/Raleway-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'raleway-bold';
+    src: url('polices/Raleway/static/Raleway-Bold.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'raleway-semibold';
+    src: url('polices/Raleway/static/Raleway-SemiBold.ttf') format('truetype');
 }
 
 body{
-    font-family: raleway-thin, 'Arial Black', Impact, serif;
+    font-family: raleway-regular, 'Arial Black', Impact, serif;
     margin: 0;
 }
 
@@ -16,11 +24,20 @@ body{
 }
 
 h1, h2{
-    font-size: x-large;
+    font-family: raleway-semibold;
+    font-size: 1.3rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+p{
+    font-size: 0.9rem;
 }
 
 .small{
-    font-size: medium;
+    font-size: 1rem;
 }
 
 /* ------------------------------------------------------------------------
@@ -53,7 +70,7 @@ header a{
     border-top: 3px solid transparent;    
 }
 
-header a:hover{
+.lien1, nav a:hover, .lien3:hover{
     border-top: 3px solid #0065FC;
 }
 
@@ -61,17 +78,19 @@ header a:hover{
     color: gray;
 }
 
-header a, header a:hover, header a:visited, .lien2:hover{
+nav a, nav a:hover, nav a:visited, .lien3, .lien3:hover{
     color: #0065FC;
 }
 
-#logoReservia{
+.lien_logo{
     grid-area: logo;
     width: 7rem;
     height: auto;
+    padding: 0;
+    margin: 0;
 }
 
-#logoReservia img{
+#logo_Reservia img{
     width: 100%;
     height: auto;
 }
@@ -82,11 +101,11 @@ h2{
 
 /*--------SMARTPHONE----------------------------------------------------*/
 /* @media screen and (max-device-width: 420px){ */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 633px) {
 
     #bloc_page{
         padding: 0;
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     header{
@@ -94,11 +113,26 @@ h2{
         grid-template-areas: "logo . button" "navbar navbar navbar";  
     }
 
+nav a{
+    border-top: inherit;
+    border-bottom: 3px solid transparent;
+}
+
+    nav a:hover{
+        border-top: inherit;
+        border-bottom: 3px solid #0065FC;
+    }
+
+    .lien3, .lien3:hover{
+        border:inherit;
+    }
+
     #logoReservia{
         margin-left: 1rem;
     }
 
     .lien1{
+        border-top: inherit;
         border-bottom: 3px solid #0065FC;
     }
     
@@ -106,7 +140,7 @@ h2{
         display: flex;
     }
 
-    nav a{
+.lien1, .lien2{
         width: 50%;
     }
 } 
@@ -140,7 +174,7 @@ h2{
 }
 
 .search_text:focus{
-    outline: none !important;
+    outline: none;
     border:1px solid #0065FC;
 }
 
@@ -164,7 +198,7 @@ h2{
 }
 
 /*--------SMARTPHONE----------------------------------------------------*/
-@media screen and (max-device-width: 480px){
+@media only screen and (max-width: 480px){
 
     .section_recherche{
         padding: 1rem;
@@ -263,7 +297,7 @@ h2{
 
 /*--------SMARTPHONE----------------------------------------------------*/
 
- @media screen and (max-device-width: 420px){
+@media only screen and (max-width: 480px){
     .filtres h4{
         width: 100%;
     }
@@ -334,6 +368,16 @@ h2{
     margin: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
+.afficher_plus{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.afficher_plus:hover{
+    text-decoration: underline;
+}
+
 /* ------------------------------------------------------------------------
  ----------ASIDE TOP-------------------------------------------------------
  ------------------------------------------------------------------------*/
@@ -362,6 +406,11 @@ aside h2{
     box-sizing: border-box;
     height: 11rem;
 }
+
+.article_populaire:hover{
+    background-color: #deebff;
+}
+
 
 .lien_hebergement_pop{
     display: flex;
@@ -400,7 +449,7 @@ aside h2{
 
 /*--------SMARTPHONE----------------------------------------------------*/
 
-@media screen and (max-device-width: 480px){
+@media only screen and (max-width: 480px){
     .section_hebergement{
         grid-template-columns: 1fr;    
     }
@@ -449,10 +498,6 @@ aside h2{
         padding: 1rem;
     }
 
-    .article_hebergement{
-/*         width: 50%; */
-    }
-
     aside{
         grid-template-columns: 1fr;
         padding: 1rem;
@@ -464,7 +509,6 @@ aside h2{
     }
 
 }
-
 
 /*--------Tablets in portrait mode---------------------------------------------------*/
 
@@ -498,7 +542,6 @@ aside h2{
     }
 }
 
-
 /* ------------------------------------------------------------------------
  ----------SECTION ACTIVITES-----------------------------------------------
  ------------------------------------------------------------------------*/
@@ -528,6 +571,10 @@ aside h2{
     margin: 0px;
     border-radius: 1.25rem;
     box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
+}
+
+.lien_activite:hover{
+    background-color: #deebff;
 }
 
 .lien_activite h3{
@@ -581,7 +628,7 @@ aside h2{
 
 /*--------SMARTPHONE----------------------------------------------------*/
 
-@media screen and (max-device-width: 480px){
+@media only screen and (max-width: 480px){
     .section_activites{
         display: block;
         padding: 1rem;
@@ -672,7 +719,7 @@ footer a:hover{
 
 /*--------SMARTPHONE----------------------------------------------------*/
 
-@media screen and (max-device-width: 480px){
+@media only screen and (max-width: 480px){
 
     footer div{
         margin: 2rem 0 0 0;
