@@ -72,6 +72,7 @@ header a{
 
 .lien1, nav a:hover, .lien3:hover{
     border-top: 3px solid #0065FC;
+    color: #0065FC;
 }
 
 .lien2, .lien2:visited{
