@@ -150,32 +150,40 @@ nav a{
  ------------------------------------------------------------------------*/
 
 .search{
-    margin-top: 1rem;
     height: 2.5rem;
-    width: auto;
     display: inline-flex;
 }
 
-.search_icon{
-    background-color: #F2F2F2;
-    padding: 0.5rem;
-    width: 2rem;
+
+.border_focus{
+    display:inline-flex;
     border-radius: 1rem 0 0 1rem;
-    text-align: center;
+    border: 1px solid #F2F2F2;
+    border-right: none;
+    overflow: hidden;
+}
+
+.search_icon{
+    display: flex;
+    background-color: #F2F2F2;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
 }
 
 .search_text{
-    border-top: #F2F2F2  1px solid;
+    border: #F2F2F2  1px solid;
     border-right: none;
-    border-bottom: #F2F2F2  1px solid;
     border-left: none;
-    padding: 0 3%;
-    width: 180px;
 }
 
 .search_text:focus{
     outline: none;
-    border:1px solid #0065FC;
+}
+
+.border_focus:focus-within{
+    border: 1px solid #0065FC;
+    border-right: none;
 }
 
 .search_format_text{

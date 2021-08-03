@@ -41,9 +41,10 @@
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p class="small">En plein centre ville ou en pleine nature</p>
             <form class="search" method="post" action="traitement.php">
-                <span class="search_icon">
+            <div class="border_focus">
+                <div class="search_icon">
                     <i class="fas fa-map-marker-alt"></i>
-                </span>
+                </div>
                 <input 
                     class="search_text search_format_text" 
                     type="search" name="rechercher" 
@@ -51,6 +52,7 @@
                     onfocus="this.placeholder = ''" 
                     onblur="this.placeholder = 'Marseille, France'"
                 />
+            </div>
                 <input 
                     class="search_button search_format_text" 
                     type="button" 
