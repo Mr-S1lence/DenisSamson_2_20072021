@@ -49,6 +49,15 @@ p{
 
 }
 
+/*--------SMARTPHONE LANDSCAPE MODE---------------------------------------------------*/
+
+@media only screen and (min-width: 421px) and (max-width: 767px){
+
+    #bloc_page{
+        padding: 0 1rem;
+    }
+}
+
 /* ------------------------------------------------------------------------
  ----------HEADER----------------------------------------------------------
  ------------------------------------------------------------------------*/
@@ -208,6 +217,12 @@ h2{
     font-weight: bold;
 }
 
+
+::placeholder{
+    color: black;
+    opacity: 1;
+}
+
 .search_button{
     border: none;
     border-radius: 0 1rem 1rem 0;
@@ -243,10 +258,11 @@ h2{
     }
 
     .search_button2{
-        position:static;
+        position:relative;
+        left: -15px;
         visibility: visible;
         border: none;
-        border-radius: 0 1rem 1rem 0;
+        border-radius: 1rem;
         padding: 0 1.5rem;
         background-color: #0065FC;
         cursor: pointer;
@@ -263,22 +279,55 @@ h2{
 
 .filtres{
     display: flex;
+    justify-content:flex-start;
+    align-items: center;
+/*     width: auto; */
+    padding: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* .filtres{
+    display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-top: 1.5rem;
     height: auto;
     padding: 0.2rem;
     flex-wrap: wrap;
+} */
+
+.container_filtre{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0rem 1rem 0 1rem;
 }
 
 .rond{
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 2.5rem;
     width: 2.5rem;
-    background-color: #deebff;
+    border: 2px solid #deebff;
     border-radius: 50%;
+    background-color: #deebff;
+}
+
+.filtre{
+    padding-left: 3.5rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    border: 2px solid #d9d9d9;
+    border-radius: 6rem;
+    z-index: -1;
 }
 
 .star_true, .fa-info, .rond .fas{
@@ -289,27 +338,16 @@ h2{
     color: #d9d9d9;
 }
 
-.filtre{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.7rem;
-    border-radius: 2.5rem;
-    border: 2px solid #d9d9d9;
-    cursor: pointer;
-}
-
 .filtre:hover{
     background-color: #deebff;
 }
 
 .filtre span{
-    margin: 0 1rem; 
     font-weight: bold; 
 }
 
 .info{
-    margin-top: 20px;
+/*     margin-top: 1rem; */
     display: flex;
     align-items: center;
 }
@@ -323,13 +361,56 @@ h2{
     margin-right: 0.6rem;
 }
 
+/* .filtre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.7rem;
+    border-radius: 2.5rem;
+    border: 2px solid #d9d9d9;
+    cursor: pointer;
+} */
+
+
+
+/* .rond{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #deebff;
+    border-radius: 50%;
+} */
+
+
 /*--------SMARTPHONE----------------------------------------------------*/
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 768px){
     .filtres h4{
         width: 100%;
     }
+
+    .filtres{
+        padding: 0;
+    }
+
+    .container_filtre{
+        margin: 0.5rem 0.5rem 0.2rem 0;
+    }
+
+    .filtre{
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+
 }
+
+/* @media only screen and (min-width: 421px) and (max-width: 767px){
+    .container_filtre{
+        margin: 0rem 0.2rem 0.2rem 0;
+    } */
 
 /* ------------------------------------------------------------------------
  ----------SECTION HEBERGEMENT + ASIDE TOP---------------------------------
@@ -518,7 +599,7 @@ aside h2{
         grid-row: 1;
         border-radius: 0;
     }
-    
+
     .legend_pop{
     margin: 0.3rem 0.3rem 0.3rem 0.5rem;
     }
@@ -599,12 +680,11 @@ aside h2{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
     grid-gap: 1.5rem;
-    margin-top: 4rem;
 }
 
 .section_activites h2{
     grid-column: span 4;
-    margin: 0;
+    margin: 3rem 0 0 0;
 }
 
 .lien_activite{
