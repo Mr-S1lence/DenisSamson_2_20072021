@@ -49,7 +49,6 @@ p{
 
 }
 
-
 /* ------------------------------------------------------------------------
  ----------HEADER----------------------------------------------------------
  ------------------------------------------------------------------------*/
@@ -379,22 +378,35 @@ h2{
     color: black;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.article_hebergement h3{
+    margin: auto 0.5rem auto 0.5rem;
 }
 
 .figure_hebergement{
     margin: 0;
     padding: 0;
 }
+
 .img_hebergement{
     object-fit: cover;
     width: 100%;
     height: 10rem;
     max-height: 100%;
     border-radius: 1rem 1rem 0 0;
+    margin-bottom: 0.5rem;
 }
 
 .legend{
-    margin: 0.5rem 0.75rem 0.5rem 0.75rem;
+    margin: auto 0.5rem 0.5rem 0.50rem;
+}
+
+.legend p{
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 .afficher_plus{
@@ -440,7 +452,6 @@ aside h2{
     background-color: #deebff;
 }
 
-
 .lien_hebergement_pop{
     display: flex;
     text-decoration: none;
@@ -476,12 +487,18 @@ aside h2{
     margin: 0;
 }
 
+.legend_pop p{
+    margin: 0.5rem 0 0.5rem 0;
+}
+
 /*--------SMARTPHONE----------------------------------------------------*/
 
 @media only screen and (max-width: 420px){
+
     .section_hebergement{
         grid-template-columns: 1fr;    
     }
+
     .articles_hebergement{
         grid-template-columns: 1fr; 
         grid-row: 2;   
@@ -501,6 +518,7 @@ aside h2{
         grid-row: 1;
         border-radius: 0;
     }
+    
     .legend_pop{
     margin: 0.3rem 0.3rem 0.3rem 0.5rem;
     }
