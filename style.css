@@ -302,6 +302,8 @@ h2{
     width: auto;
     height: auto;
     margin: 0rem 1rem 0 1rem;
+/*     border: solid red 1px; */
+    border-radius: 6rem;
 }
 
 .rond{
@@ -328,6 +330,7 @@ h2{
     border: 2px solid #d9d9d9;
     border-radius: 6rem;
     z-index: -1;
+    cursor: pointer;
 }
 
 .star_true, .fa-info, .rond .fas{
@@ -340,6 +343,7 @@ h2{
 
 .filtre:hover{
     background-color: #deebff;
+    border: 2px solid#deebff;
 }
 
 .filtre span{
