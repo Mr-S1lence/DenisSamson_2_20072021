@@ -56,6 +56,7 @@ p{
     #bloc_page{
         padding: 0 1rem;
     }
+    
 }
 
 /* ------------------------------------------------------------------------
@@ -114,23 +115,20 @@ header a:visited{
 
 .lien_logo{
     grid-area: logo;
-/*     width: 7rem;
-    height: auto; */
     padding: 0;
 }
 
 #logo_Reservia img{
     width: 100%;
     height: auto;
-/*     margin-right: 1rem; */
 }
 
 h2{
     margin: 0;
 }
 
-/*--------SMARTPHONE----------------------------------------------------*/
-/* @media screen and (max-device-width: 420px){ */
+/*--------SMARTPHONE + TABLET---------------------------------------------------*/
+
 @media only screen and (max-width: 690px) {
 
     header{
@@ -169,6 +167,7 @@ h2{
     .lien1, .lien2{
         width: 50%;
     }
+
 } 
     
 /* ------------------------------------------------------------------------
@@ -271,6 +270,7 @@ h2{
         padding: 0.5rem;
         width: 2rem;
     } 
+
 }
 
 /* ------------------------------------------------------------------------
@@ -281,28 +281,16 @@ h2{
     display: flex;
     justify-content:flex-start;
     align-items: center;
-/*     width: auto; */
     padding: 0.5rem;
     margin-top: 1rem;
     flex-wrap: wrap;
 }
-
-/* .filtres{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 1.5rem;
-    height: auto;
-    padding: 0.2rem;
-    flex-wrap: wrap;
-} */
 
 .container_filtre{
     position: relative;
     width: auto;
     height: auto;
     margin: 0rem 1rem 0 1rem;
-/*     border: solid red 1px; */
     border-radius: 6rem;
 }
 
@@ -341,9 +329,15 @@ h2{
     color: #d9d9d9;
 }
 
-.filtre:hover{
+.container_filtre:hover > .rond{
+    border-radius: 50% 0 0 50%;
+    border-top: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+    border-left: 2px solid #d9d9d9;
+}
+
+.container_filtre:hover > .filtre{
     background-color: #deebff;
-    border: 2px solid#deebff;
 }
 
 .filtre span{
@@ -351,7 +345,6 @@ h2{
 }
 
 .info{
-/*     margin-top: 1rem; */
     display: flex;
     align-items: center;
 }
@@ -365,33 +358,10 @@ h2{
     margin-right: 0.6rem;
 }
 
-/* .filtre{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.7rem;
-    border-radius: 2.5rem;
-    border: 2px solid #d9d9d9;
-    cursor: pointer;
-} */
-
-
-
-/* .rond{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    height: 2.5rem;
-    width: 2.5rem;
-    background-color: #deebff;
-    border-radius: 50%;
-} */
-
-
 /*--------SMARTPHONE----------------------------------------------------*/
 
 @media only screen and (max-width: 768px){
+
     .filtres h4{
         width: 100%;
     }
@@ -410,11 +380,6 @@ h2{
     }
 
 }
-
-/* @media only screen and (min-width: 421px) and (max-width: 767px){
-    .container_filtre{
-        margin: 0rem 0.2rem 0.2rem 0;
-    } */
 
 /* ------------------------------------------------------------------------
  ----------SECTION HEBERGEMENT + ASIDE TOP---------------------------------
@@ -605,7 +570,7 @@ aside h2{
     }
 
     .legend_pop{
-    margin: 0.3rem 0.3rem 0.3rem 0.5rem;
+        margin: 0.3rem 0.3rem 0.3rem 0.5rem;
     }
 
 }
@@ -617,6 +582,7 @@ aside h2{
     .section_hebergement{
         grid-template-columns: 1fr;  
     }
+
     .articles_hebergement{
         grid-template-columns: repeat(2,1fr); 
         grid-row: 2;   
@@ -635,8 +601,9 @@ aside h2{
         padding: 1rem;
         grid-row: 1;
     }
+
     .legend_pop{
-    margin: 0.3rem 0.3rem 0.3rem 0.5rem;
+        margin: 0.3rem 0.3rem 0.3rem 0.5rem;
     }
 
 }
@@ -671,6 +638,7 @@ aside h2{
     aside{
             grid-row: 1;
     }
+
 }
 
 /* ------------------------------------------------------------------------
@@ -679,8 +647,6 @@ aside h2{
 
 .section_activites{
     display: grid;
-/*     grid-template-columns:  repeat(4, 1fr); */
-/*     grid-template-rows: repeat(4, 1fr); */
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
     grid-gap: 1.5rem;
@@ -759,6 +725,7 @@ aside h2{
 /*--------SMARTPHONE----------------------------------------------------*/
 
 @media only screen and (max-width: 420px){
+
     .section_activites{
         display: block;
         padding: 1rem;
@@ -776,11 +743,13 @@ aside h2{
     max-height: 100%;
     border-radius: 1rem 1rem 0 0;
     }
+
 }
 
 /*--------SMARTPHONE LANDSCAPE MODE, Tablets in portrait mode--------------------------------------*/
 
 @media only screen and (min-width: 421px) and (max-width: 1023px){
+
     .section_activites{
         display: grid;
         padding: 1rem;
@@ -790,23 +759,23 @@ aside h2{
 
     .section_activites h2{
         grid-column: span 2;
-}
+    }
 
     .lien_activite{
         grid-row:inherit;
         grid-column:inherit;
         margin-top: 2rem;
-/*         width: 40%; */
     }
 
     .img_activite{
-    position: static;
-    object-fit: cover;
-    width: 100%;
-    height: 10rem;
-    max-height: 100%;
-    border-radius: 1rem 1rem 0 0;
+        position: static;
+        object-fit: cover;
+        width: 100%;
+        height: 10rem;
+        max-height: 100%;
+        border-radius: 1rem 1rem 0 0;
     }
+
 }
 
 /* ------------------------------------------------------------------------
@@ -886,19 +855,8 @@ footer a:hover{
         justify-content:space-between;
         padding: 2rem 0 2rem 0;
     }
+
     footer div{
         margin: inherit;
-/*         margin: 2rem 4rem 0 0; */
-/*         width: 100%; */
     }
-}
-
-/*--------Tablets in landscape mode, older desktop monitors---------------------------------------------------*/
-
-@media only screen and (min-width: 1024px) and (max-width: 1365px){
-
-
-/*     footer div{
-        margin: 3rem 8rem 3rem 0;
-    } */
 }
